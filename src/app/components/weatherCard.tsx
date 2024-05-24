@@ -58,19 +58,19 @@ const WeatherCard = ({ defaultCity }: WeatherCardProps) => {
   }, []);
 
   const fetchData = (city: string) => {
-    // fetchWeatherData(city)
-    //   .then((data) => {
-    //     if (data) {
-    //       setWeatherData(data);
-    //     } else {
-    //       setWeatherData(defaultWeatherData);
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error fetching weather data:", error);
-    //     setWeatherData(defaultWeatherData);
-    //   });
-    setWeatherData(sampleData);
+    fetchWeatherData(city)
+      .then((data) => {
+        if (data) {
+          setWeatherData(data);
+        } else {
+          setWeatherData(defaultWeatherData);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching weather data:", error);
+        setWeatherData(defaultWeatherData);
+      });
+    // setWeatherData(sampleData);
   };
 
   const handleCityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
