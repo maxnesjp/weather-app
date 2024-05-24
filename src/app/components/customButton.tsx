@@ -4,7 +4,7 @@ import { ButtonProps } from "../../../types";
 const CustomButton = ({ title }: ButtonProps) => {
   return (
     <div>
-      <button className="border-2 border-spacing-1">{title}</button>
+      <button className="border-2 border-spacing-2">{title}</button>
     </div>
   );
 };
