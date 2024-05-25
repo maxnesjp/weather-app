@@ -95,6 +95,7 @@ const WeatherCard = ({ defaultCity }: WeatherCardProps) => {
               placeholder="Enter city name"
             />
           </div>
+          <a href=""></a>
           <div className="w-full sm:w-1/2 mt-1 sm:mt-0 sm:pl-1">
             <button
               onClick={handleSubmit}
