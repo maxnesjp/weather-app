@@ -1,8 +1,6 @@
 export interface WeatherCardProps {
     defaultCity: string;
 }
-
-
 export 
 interface WeatherResponse {
   location: {
