@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { fetchWeatherData } from "../../../utils";
 import { WeatherCardProps, WeatherResponse } from "../../../types"; // Assuming types are defined in ../types
 import WeatherMetric from "./weatherMetric";
 import { sampleData } from "../../../constants";
@@ -57,20 +56,26 @@ const WeatherCard = ({ defaultCity }: WeatherCardProps) => {
     fetchData(city);
   }, []);
 
-  const fetchData = (city: string) => {
-    fetchWeatherData(city)
-      .then((data) => {
-        if (data) {
-          setWeatherData(data);
-        } else {
-          setWeatherData(defaultWeatherData);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching weather data:", error);
-        setWeatherData(defaultWeatherData);
+  const fetchData = async (city: string) => {
+    try {
+      const response = await fetch("/weather/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ city }),
       });
-    // setWeatherData(sampleData);
+
+      if (response.ok) {
+        const data = await response.json();
+        setWeatherData(data);
+      } else {
+        console.error("Failed to fetch weather data");
+      }
+    } catch (error) {
+      console.error("Error fetching weather data:", error);
+      setWeatherData(defaultWeatherData); // Reset or handle state accordingly on error
+    }
   };
 
   const handleCityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
