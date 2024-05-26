@@ -1,26 +1,20 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
-      "static/chunks/23-b29ff9681e99b7f6.js",
-      "static/chunks/main-app-19c48bdb603d6a82.js",
-      "static/chunks/app/_not-found/page-c3d7bfc1806ec87c.js"
-    ],
     "/layout": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
-      "static/chunks/23-b29ff9681e99b7f6.js",
-      "static/chunks/main-app-19c48bdb603d6a82.js",
-      "static/css/43c8ef0b61a92907.css",
-      "static/chunks/app/layout-179d702e4ef92d64.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/weather/page": [
-      "static/chunks/webpack-879f858537244e02.js",
-      "static/chunks/fd9d1056-2737f78bfff3f6bf.js",
-      "static/chunks/23-b29ff9681e99b7f6.js",
-      "static/chunks/main-app-19c48bdb603d6a82.js",
-      "static/chunks/app/weather/page-4f1640143212cd06.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/weather/page.js"
     ]
   }
 }
